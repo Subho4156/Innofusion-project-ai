@@ -11,3 +11,6 @@ wordfreq
 python-dotenv
 boto3
 botocore
+PyPDF2
+cohere
+openai
