@@ -1,0 +1,11 @@
+flask
+pymongo
+pytesseract
+pdf2image
+spacy
+textblob
+nltk
+yake
+pillow
+wordfreq
+python-dotenv
