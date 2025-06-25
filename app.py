@@ -19,6 +19,7 @@ import re
 import json
 import os
 import spacy
+from spacy.cli import download
 from textblob import TextBlob
 import PyPDF2
 import io
@@ -66,7 +67,11 @@ documents_collection = db["documents"]
 users_collection = db["users"]
 
 ## Configuring Spacy
-nlp = spacy.load("en_core_web_sm")
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
 
 ## Configuring Boto3 to read from S3
 bucket_name = BUCKET_NAME

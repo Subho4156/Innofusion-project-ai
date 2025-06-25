@@ -15,6 +15,7 @@ import re
 import json
 import os
 import spacy
+from spacy.cli import download
 from textblob import TextBlob
 import PyPDF2
 import io
@@ -26,7 +27,11 @@ from nltk.tokenize import word_tokenize
 final_stop = json.load(open("stopwords.json", "r"))['stopwords']
 
 ## Configuring Spacy
-nlp = spacy.load("en_core_web_sm")
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
 
 ## OCR Detection Module
 def return_string_from_path(file):
