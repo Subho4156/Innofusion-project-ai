@@ -9,3 +9,5 @@ yake
 pillow
 wordfreq
 python-dotenv
+boto3
+botocore
