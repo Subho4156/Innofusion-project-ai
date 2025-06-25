@@ -14,4 +14,4 @@ botocore
 PyPDF2
 cohere
 openai
-pycryptodome
+pycryptodomex
