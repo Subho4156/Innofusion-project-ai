@@ -3,6 +3,7 @@ pymongo
 pytesseract
 pdf2image
 spacy
+en-core-web-sm
 textblob
 nltk
 yake
