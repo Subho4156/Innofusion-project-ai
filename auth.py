@@ -1,5 +1,5 @@
 from utils import message
-from Crypto.Cipher import AES
+from Cryptodome.Cipher import AES
 import json
 import datetime
 
